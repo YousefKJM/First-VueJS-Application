@@ -1,0 +1,2 @@
+# First-VueJS-Applucation
+This is a very basic application developed using VueJS framework!
