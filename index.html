@@ -1,8 +1,4 @@
-
-
-
 <script src="vue.js"></script>
-
 
 <script src="script.js"></script>
 <html>
@@ -15,6 +11,7 @@
 
         <button v-on:click="increase">Click me</button>
         <p>{{ counter }}</p>
+        <p v-on:mousemove="updateCoordinate">Coordinates: ({{ x }} , {{ y }})</p>
     </div>
 </html>
 
@@ -30,7 +27,9 @@
             title: 'Hello World!',
             link: 'https://google.com',
             finishedLink: '<a href="https://google.com">Google</a>',
-            counter: 0
+            counter: 0,
+            x: 0,
+            y: 0
 
         },
         methods: {
@@ -44,6 +43,10 @@
             },
             increase: function() {
                 this.counter++;
+            },
+            updateCoordinate: function(event) {
+                this.x = event.clientX;
+                this.y = event.clientY;
             },
 
         }
