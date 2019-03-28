@@ -7,6 +7,7 @@
 <script src="script.js"></script>
 <html>
     <div id="app">
+        <p>{{ sayHello() }}</p>
         <input type="text" v-on:input="changeTitle">
         <p>{{ title }}</p>
     </div>
@@ -26,7 +27,11 @@
         methods: {
             changeTitle: function(event) {
                 this.title = event.target.value;
+            },
+            sayHello: function() {
+                return 'Hello!';
             }
+
         }
     });
 </script>
