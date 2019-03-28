@@ -10,6 +10,8 @@
         <h1 v-once>{{ title }} </h1>
         <!-- <input type="text" v-on:input="changeTitle"> -->
         <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p>
+        <hr>
+        <p v-html="finishedLink"></p>
     </div>
 </html>
 
@@ -23,7 +25,8 @@
         el: '#app',
         data: {
             title: 'Hello World!',
-            link: 'https://google.com'
+            link: 'https://google.com',
+            finishedLink: '<a href="https://google.com">Google</a>'
         },
         methods: {
             // changeTitle: function(event) {
