@@ -7,9 +7,9 @@
 <script src="script.js"></script>
 <html>
     <div id="app">
-        <p>{{ title }} - <a v-bind:href="link">Google</a></p>
-        <input type="text" v-on:input="changeTitle">
-        <p>{{ sayHello() }}</p>
+        <h1 v-once>{{ title }} </h1>
+        <!-- <input type="text" v-on:input="changeTitle"> -->
+        <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p>
     </div>
 </html>
 
@@ -26,10 +26,11 @@
             link: 'https://google.com'
         },
         methods: {
-            changeTitle: function(event) {
-                this.title = event.target.value;
-            },
+            // changeTitle: function(event) {
+            //     this.title = event.target.value;
+            // },
             sayHello: function() {
+                this.title = 'Hello!';
                 return this.title;
                 //return 'Hello!';
             }
