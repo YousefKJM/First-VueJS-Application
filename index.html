@@ -7,9 +7,9 @@
 <script src="script.js"></script>
 <html>
     <div id="app">
-        <p>{{ sayHello() }}</p>
+        <p>{{ title }} - <a v-bind:href="link">Google</a></p>
         <input type="text" v-on:input="changeTitle">
-        <p>{{ title }}</p>
+        <p>{{ sayHello() }}</p>
     </div>
 </html>
 
@@ -22,7 +22,8 @@
     new Vue({
         el: '#app',
         data: {
-            title: 'Hello World!'
+            title: 'Hello World!',
+            link: 'https://google.com'
         },
         methods: {
             changeTitle: function(event) {
